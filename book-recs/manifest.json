@@ -1,0 +1,33 @@
+{
+  "name": "book-recs",
+  "version": "1.0.0",
+  "description": "Personalized book recommendation engine based on reading history and patterns",
+  "author": "PicoClaw",
+  "license": "MIT",
+  "dependencies": {},
+  "commands": {
+    "init": {
+      "args": ["--library-path", "<path>"],
+      "description": "Initialize with your reading library"
+    },
+    "list": {
+      "args": ["--limit", "<int>"],
+      "description": "List top recommendations"
+    },
+    "analyze": {
+      "args": [],
+      "description": "Analyze reading patterns and generate profile"
+    },
+    "search": {
+      "args": ["--genre", "<string>", "--themes", "<string>"],
+      "description": "Search books by criteria"
+    }
+  },
+  "features": [
+    "Pattern-based recommendations",
+    "Author affinity analysis",
+    "Series continuation suggestions",
+    "Theme matching",
+    "Reading style preferences"
+  ]
+}

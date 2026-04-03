@@ -1,0 +1,61 @@
+# libris-memoria.toml — Libris-Memoria canonical library database
+#
+# GENRE CODES
+#   F=Fantasy  SF=Science Fiction  A=Adventure  Ch=Children's  Mg=Magic
+#   CA=Coming-of-age  H=Horror  M=Mystery  T=Thriller  R=Romance
+#   HF=Historical Fiction  NF=Non-Fiction
+#
+# STATUS CODES
+#   r=read  re=reading  tr=to-read  ur=unreleased
+#
+# RATING FIELDS (all optional, scale 0–10)
+#   r=book rating  ra=audiobook rating  rm=movie/adaptation rating
+#
+# UNRELEASED BOOKS
+#   s="ur" requires at least one of: release=  release_audio=  (ISO date YYYY-MM-DD)
+
+[series.hp]
+title  = "Harry Potter"
+author = "J.K. Rowling"
+genres = ["F","Mg"]
+books  = [
+  {n=1, t="Philosopher's Stone",    s="r", r=6},
+  {n=2, t="Chamber of Secrets",     s="r", r=7},
+  {n=3, t="Prisoner of Azkaban",    s="r"},
+  {n=4, t="Goblet of Fire",         s="tr"},
+  {n=5, t="Order of the Phoenix",   s="tr"},
+  {n=6, t="Half-Blood Prince",      s="tr"},
+  {n=7, t="Deathly Hallows",        s="tr"},
+]
+
+[series.narnia]
+title  = "The Chronicles of Narnia"
+author = "C.S. Lewis"
+genres = ["F","Ch"]
+books  = [
+  {n=1, t="The Lion, the Witch and the Wardrobe", s="r", r=6},
+]
+
+[series.dcc]
+title  = "Dungeon Crawler Carl"
+author = "Matt Dinniman"
+genres = ["A","CA","F"]
+books  = [
+  {n=1, t="Dungeon Crawler Carl",             s="r", r=10, ra=10},
+  {n=2, t="Carl's Doomsday Scenario",          s="r", r=10, ra=10},
+  {n=3, t="The Dungeon Anarchist's Cookbook",  s="r", r=10, ra=10},
+  {n=4, t="The Gate of the Feral Gods",        s="r", r=10, ra=10},
+  {n=5, t="The Butcher's Masquerade",          s="r", r=10, ra=10},
+  {n=6, t="The Eye of the Bedlam Bride",       s="r", r=10, ra=10},
+  {n=7, t="This Inevitable Ruin",              s="r", r=10, ra=10},
+  {n=8, t="A Parade of Horribles",             s="ur", release="2026-05-12", release_audio="2026-05-26"},
+]
+
+[standalone.phm]
+title  = "Project Hail Mary"
+author = "Andy Weir"
+genres = ["SF","A"]
+s  = "r"
+r  = 8
+ra = 10
+rm = 8
